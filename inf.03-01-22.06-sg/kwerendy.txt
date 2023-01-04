@@ -1,0 +1,13 @@
+kwerenda 1
+select ryby.id, ryby.nazwa, ryby.wystepowanie from ryby where ryby.styl_zycia = 1;
+
+kwerenda 2
+SELECT okres_ochronny.Ryby_id, okres_ochronny.wymiar_ochronny from okres_ochronny where okres_ochronny.wymiar_ochronny < 30; 
+
+kwerenda 3
+SELECT ryby.nazwa, lowisko.akwen, lowisko.wojewodztwo from ryby
+inner join lowisko on lowisko.Ryby_id = ryby.id
+where lowisko.rodzaj = 3;
+
+kwerenda 4
+ALTER TABLE `okres_ochronny` ADD `dobowy_limit` INT(255) NOT NULL AFTER `wymiar_ochronny`; 
